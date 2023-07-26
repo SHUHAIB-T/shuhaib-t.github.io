@@ -114,7 +114,19 @@
 //form submission
 
 $("#submit-form").submit((e)=>{
-	e.preventDefault()
+	let name = document.forms.submitfrm.name.value;
+	let email = document.forms.submitfrm.email.value;
+	let subject = document.forms.submitfrm.subject.value;
+	let message = document.forms.submitfrm.message.value;
+
+	if(name==""){
+		alert("Name Must be filed out")
+	}else if(email==""){
+		alert("Email must be filled out")
+	}else if(message==""){
+		alert("message must be filled out")
+	}else{
+		e.preventDefault()
 	$.ajax({
 		url:"https://script.google.com/macros/s/AKfycbzMU5krJ9t4o8v_ic74yIFIsfoRDR7UxMvSwg-r-pB3frgfWKJFBV2UetyRUkkpkcbQ/exec",
 		data:$("#submit-form").serialize(),
@@ -129,4 +141,7 @@ $("#submit-form").submit((e)=>{
 
 		}
 	})
+	}
+
+	
 })
