@@ -122,7 +122,10 @@ $("#submit-form").submit((e)=>{
 	if(name==""){
 		alert("Name Must be filed out");
 		return false;
-	}else if(email==""){
+	}else if($.isNumeric(name)){
+		alert("The Name can Only conatain Alphabets");
+		return false;
+	} else if(email==""){
 		alert("Email must be filled out");
 		return false;
 	}else if(message==""){
