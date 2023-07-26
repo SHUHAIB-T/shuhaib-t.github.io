@@ -120,13 +120,16 @@ $("#submit-form").submit((e)=>{
 	let message = document.forms.submitfrm.message.value;
 
 	if(name==""){
-		alert("Name Must be filed out")
+		alert("Name Must be filed out");
+		return false;
 	}else if(email==""){
-		alert("Email must be filled out")
+		alert("Email must be filled out");
+		return false;
 	}else if(message==""){
-		alert("message must be filled out")
+		alert("message must be filled out");
+		return false;
 	}else{
-		e.preventDefault()
+	e.preventDefault()
 	$.ajax({
 		url:"https://script.google.com/macros/s/AKfycbzMU5krJ9t4o8v_ic74yIFIsfoRDR7UxMvSwg-r-pB3frgfWKJFBV2UetyRUkkpkcbQ/exec",
 		data:$("#submit-form").serialize(),
