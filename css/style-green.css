@@ -639,7 +639,7 @@ a:hover {
   margin-bottom: 8rem;
 }
 
-.intro .text-slider-items {
+.intro {
   display: none;
 }
 
@@ -1157,7 +1157,6 @@ a:hover {
 /*======================================
 //--//-->   FOOTER
 ======================================*/
-
 footer {
   text-align: center;
   color: #fff;
